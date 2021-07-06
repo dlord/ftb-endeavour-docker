@@ -9,7 +9,7 @@ services:
     environment:
       - DEFAULT_OP=dlord69
       - MINECRAFT_EULA=true
-      - MINECRAFT_OPTS=-server -Xmx4G -Xlog:gc -XshowSettings:vm -XX:+PrintFlagsFinal -XX:+UseShenandoahGC -XX:ShenandoahGCHeuristics=compact -XX:+AlwaysPreTouch -XX:-UseBiasedLocking -XX:+DisableExplicitGC
+      - MINECRAFT_OPTS=-server -Xmx2G -Xlog:gc -XshowSettings:vm -XX:+PrintFlagsFinal -XX:+UseG1GC -XX:MaxGCPauseMillis=50 -XX:+AlwaysPreTouch -XX:+DisableExplicitGC
     volumes:
       - minecraft-data:/opt/minecraft
 volumes:

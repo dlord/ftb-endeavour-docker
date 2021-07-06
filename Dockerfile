@@ -1,4 +1,4 @@
-FROM dlord/minecraft:java15
+FROM dlord/minecraft:graalvm-java11
 
 RUN curl -SL https://api.modpacks.ch/public/modpack/80/2053/server/linux > /tmp/setup \
     && chmod +x /tmp/setup \
